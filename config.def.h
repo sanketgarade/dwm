@@ -126,6 +126,8 @@ static Key keys[] = {
     /*Thinkpad keys -start */
 	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 15") },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 15") },
+	{ ShiftMask, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 1") },
+	{ ShiftMask, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 1") },
     /*Thinkpad keys -end */
 
 	TAGKEYS(                        XK_1,                      0)
