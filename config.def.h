@@ -129,7 +129,7 @@ static Key keys[] = {
 	{ ShiftMask, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 1") },
 	{ ShiftMask, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 1") },
 
-    //{ 0, XF86XK_AudioMute,          spawn,      SHCMD("amixer set Master playback off") },
+    { 0, XF86XK_AudioMute,          spawn,      SHCMD("amixer set Master toggle") },
     { 0, XF86XK_AudioLowerVolume,   spawn,      SHCMD("amixer set Master playback -M 10%-") },
     { 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("amixer set Master playback -M 10%+") },
     //{ 0, XF86XK_AudioMicMute,       spawn,      SHCMD("amixer set Master playback off") },
