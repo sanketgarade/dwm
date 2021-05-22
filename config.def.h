@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include "push.c"
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
@@ -122,6 +123,24 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+    /*Thinkpad keys -start */
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 15") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 15") },
+	{ ShiftMask, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 1") },
+	{ ShiftMask, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 1") },
+
+    { 0, XF86XK_AudioMute,          spawn,      SHCMD("amixer set Master toggle") },
+    { 0, XF86XK_AudioLowerVolume,   spawn,      SHCMD("amixer set Master playback -M 10%-") },
+    { 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("amixer set Master playback -M 10%+") },
+    //{ 0, XF86XK_AudioMicMute,       spawn,      SHCMD("amixer set Master playback off") },
+// XF86XK_AudioPlay
+// XF86XK_AudioStop
+// XF86XK_AudioPrev
+// XF86XK_AudioNext
+
+
+    /*Thinkpad keys -end */
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
