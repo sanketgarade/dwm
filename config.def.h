@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include "push.c"
+/* XF86keysym file is located at /usr/include/X11/XF86keysym.h */
 #include <X11/XF86keysym.h>
 
 /* appearance */
