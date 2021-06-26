@@ -2,6 +2,7 @@
 #include "push.c"
 /* XF86keysym file is located at /usr/include/X11/XF86keysym.h */
 #include <X11/XF86keysym.h>
+#include "customKeys.h"
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
@@ -139,6 +140,9 @@ static Key keys[] = {
 // XF86XK_AudioPrev
 // XF86XK_AudioNext
 
+	// Japanese keyboard specific keys
+    { 0, XF86XK_HiraganaKatakana,          spawn,      SHCMD("setxkbmap in") },		// set keyboard layout to Indian (Devanagari default)
+    { 0, XF86XK_HenkanMode,          spawn,      SHCMD("setxkbmap us") },		// set keyboard layout to US English
 
     /*Thinkpad keys -end */
 
